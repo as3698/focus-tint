@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Tint",
+  "version": "1.0",
+  "description": "Toggles a comfortable tint overlay on web pages.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting"]
+}
