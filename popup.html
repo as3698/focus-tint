@@ -2,13 +2,58 @@
 <html>
 <head>
   <style>
-    body { width: 160px; padding: 10px; text-align: center; font-family: sans-serif; }
-    button { width: 100%; padding: 8px; cursor: pointer; border-radius: 4px; border: none; background: #FFD166; font-weight: bold; }
+    body {
+      width: 200px;
+      padding: 12px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+    }
+    .palette {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 12px;
+    }
+    .color-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      cursor: pointer;
+      outline: none;
+    }
+    .color-btn.selected {
+      border-color: #333;
+      transform: scale(1.1);
+    }
+    #toggleTint {
+      width: 100%;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      background: #333;
+      color: #fff;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <h3>Focus Tint</h3>
+  
+  <div class="palette">
+    <!-- Preset Translucent RGBA Colors -->
+    <button class="color-btn selected" style="background: rgba(255, 230, 180, 0.6);" data-color="rgba(255, 230, 180, 0.25)" title="Warm Amber"></button>
+    <button class="color-btn" style="background: rgba(173, 216, 230, 0.6);" data-color="rgba(173, 216, 230, 0.25)" title="Cool Blue"></button>
+    <button class="color-btn" style="background: rgba(180, 238, 180, 0.6);" data-color="rgba(180, 238, 180, 0.25)" title="Mint Green"></button>
+    <button class="color-btn" style="background: rgba(255, 192, 203, 0.6);" data-color="rgba(255, 192, 203, 0.25)" title="Rose Pink"></button>
+  </div>
+
   <button id="toggleTint">Toggle Tint</button>
+
   <script src="popup.js"></script>
 </body>
 </html>
